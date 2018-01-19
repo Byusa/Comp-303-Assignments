@@ -17,7 +17,7 @@ public class PinTest {
         myPin.setInitialpin(inputCode);
         
         System.out.println("Test case for method <<inputValidation()>> : ");
-        for(int i=-150; i<=120; i++){
+        for(int i=-120; i<=120; i++){
             String str1 = Integer.toString(i);
             if((i<10) && (i>=0)){
                 String str2 = "0" +str1;
@@ -27,9 +27,14 @@ public class PinTest {
         }
         int j = 0;
         int length = 2;
-        while(j<=10){
+        while(j<=5){
             System.out.println("Arguments: <<"+generateRandomPassword(length)+">> Result: <<"+myPin.inputValidation(generateRandomPassword(length))+">>");
             j++;
+        }
+        length = 0;
+        while(j<=20 ||length<10){
+            System.out.println("Arguments: <<"+generateRandomPassword(length)+">> Result: <<"+myPin.inputValidation(generateRandomPassword(length))+">>");
+            j++; length++;
         }
         String empty = " ";
         System.out.println("Arguments: <<  >> Result: <<"+myPin.inputValidation(empty)+">>");
@@ -44,12 +49,11 @@ public class PinTest {
 
 		String values = Capital_chars + Small_chars +numbers + symbols;
 
-		// Using random method
-		Random randm = new Random();
+                Random randm = new Random();
 
 		char[] password = new char[len];
 
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < len; i++)
 		{
 		   password[i] =values.charAt(randm.nextInt(values.length()));
 
