@@ -1,20 +1,16 @@
 package pintest;
 
-/*File Name: pinMain.java
+/*File Name: pin.java
 Developers: <<Serge Jabo Byusa>>
-Purpose: <<This program update the pin of the user>>
-Inputs: <<Old pin>> <<The user inputs his old pin which is by default 00, 
-                        create a new pin composed of two int digits>>
-Outputs: <<new pin >> <<It output his new pin created>>
+Purpose: <<Checks if the input of the user is valid>>
+Inputs: <<pin of user as string>> <<The user inputs his/her pin>>
+Outputs: <<boolean value>> <<It ouputs true if it is valid and false if not>>
 Modifications
 ==========
-<<S.B.J>> <<17th Jan>> <<created a inputValidation() method*/
-
-import java.util.*;
-
+<<S.B.J>> <<17th Jan>> <<created and made a inputValidation() method better>>*/
 public class pin {
     private String Initialpin;
-    
+    //pin constructor with Initialpin as input
     public pin(String Initialpin){
         this.Initialpin=Initialpin;
     }
@@ -24,8 +20,12 @@ public class pin {
     public void setInitialpin(String Initialpin){
         this.Initialpin=Initialpin;
     }
- //The method will call inputValidation() then update the new pin
- //It does not return it only calls inputValidation() and it is called in main function
+// Developers: <<Serge Jabo Byusa>>
+// Purpose: <<Checks if the pin is a valid input or not>>
+// Inputs: <<pin (String)>> <<You input the pin as a string>>
+// Outputs: <<boolean>> <<outputs true if valid false otherwise>>
+// Side-effects: <<None>>
+// Special Notes: <<None>>
     public static boolean inputValidation(String pin) {
          boolean result=true;
          if(pin.contains("-")){

@@ -1,21 +1,33 @@
-
+/*File Name: pin.java
+Developers: <<Serge Jabo Byusa>>
+Purpose: <<Has the updatePin method that interact with the user using scanner
+            to update the pin>>
+Inputs: <<None>> 
+Outputs: <<None>> 
+Modifications
+==========
+<<S.B.J>> <<17th Jan>> <<created and made a inputValidation() method better>>*/
 package pinmain;
 
 import java.util.*;
 
 public class PinMain {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
         String  inputCode = "00";
         pin pin1 = new pin(inputCode);
         pin1.setInitialpin(inputCode);
-        //pin pin1 = new pin(inputCode);
         Updatepin();
     }
+// Developers: <<Serge Jabo Byusa>>
+// Purpose: <<I'm updating the user's password>>
+// Inputs: <<None>> 
+// Outputs: <<New Pin>> <<Outputs the new pin after asking for the
+                      //old pic and updates if the old pin is correct>>
+// Side-effects: <<None>>
+// Special Notes: <<Does not impose any restrictions on the characters for each field.
+                    //ie:They can be any string>>
+
     
     public static void Updatepin() {
         String oldpin="", Newpin="";
