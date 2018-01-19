@@ -31,12 +31,10 @@ public class PinTest {
             System.out.println("Arguments: <<"+generateRandomPassword(length)+">> Result: <<"+myPin.inputValidation(generateRandomPassword(length))+">>");
             j++;
         }
+        String empty = " ";
+        System.out.println("Arguments: <<  >> Result: <<"+myPin.inputValidation(empty)+">>");
     }
-    String empty = " ";
-        System.out.println("Arguments: <<" ">> Result: <<"+myPin.inputValidation(empty)+">>");
-       // System.out.println("Arguments: <<@>> Result: <<"+myPin.inputValidation("@")+">>");
-        //System.out.println("Arguments: <<000>> Result: <<"+myPin.inputValidation("000")+">>");
-        //System.out.println("Arguments: <<+00>> Result: <<"+myPin.inputValidation("+00")+">>");
+    
        public static String generateRandomPassword(int len)
 	{
 		String Capital_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
